@@ -35,9 +35,9 @@ The end1 should be the same as start2, and end2 should be the same as start3.
 However, they can still be different. 
 
 ### Where should change?
-In the below section, we need to change the value of route to link the different pages. (Use the result of get_fast_path functions)
+* In the below section, we need to change the value of route to link the different pages. (Use the result of get_fast_path functions)
 
-'''
+```
     clear_all();
 
 	var start = document.getElementById('start').value;
@@ -48,5 +48,6 @@ In the below section, we need to change the value of route to link the different
 	routes = [[start,mid,type1],[mid,end,type2]];
 
 	clicke();
-'''
+```
+* Google API key for google api direction service 
 
