@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="map.css">
+	    <meta name="view_in_map" content="initial-scale=1.0, user-scalable=no">
+    	<meta charset="utf-8">
+    	<title>View in Map</title>
+	<body>
+		<div id="map"></div>
+		<div id="right-panel">
+			<div>
+				<b>From Start:</b>
+    			<select id="start">
+      				<option value="Time Square NY">Time Square</option>
+				</select>
+				<b>To Mid:</b> 
+    			<select id="mid">
+      				<option value="Pennsylvania Station NY">Pennsylvania Station</option>
+				</select>
+				<b>Type:</b> 
+    			<select id="type1">
+      				<option value="WALKING1">Walk</option>
+      				<option value="BIKING1">Bike</option>
+      				<option value="SUBWAY">Subway</option>
+				</select>
+
+				<br>
+				<br>
+				<b>To End:</b>
+    			<select id="end">
+      				<option value="Prince Street Station NY">Prince Street Station</option>
+				</select>
+				<b>Type:</b> 
+    			<select id="type2">
+      				<option value="WALKING2">Walk</option>
+      				<option value="BIKING2">Bike</option>
+      				<option value="SUBWAY">Subway</option>
+				</select>
+				<br>
+				<input type="submit" id="submit">
+			</div>
+		</div>
+	<script src="map.js"></script>
+	<script 
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByGyX8cPwxqRnxPtTrN1ctGxhpNqJLX5w&callback=initMap"  async defer >
+    </script>
+	</body>
+
+</html>
