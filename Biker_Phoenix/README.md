@@ -4,8 +4,11 @@ University of Pennsylvania CIS550 Final Project
 
 ## Contributors 
 Garvit Gupta(https://github.com/TheGarvitGupta)
+
 Ignacio Arranz(https://github.com/arranzignacio)
+
 Gayatri Mavani(https://github.com/gmavani)
+
 Yu-Ho Hsieh(https://github.com/HsiehYuho)
 
 ## Demo Video
