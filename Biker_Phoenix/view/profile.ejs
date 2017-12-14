@@ -1,0 +1,10 @@
+<p>
+ID: <%= user.id %><br/>
+Username: <%= user.username %><br/>
+Name: <%= user.displayName %><br/>
+User: <%=JSON.stringify(user)%>
+<% if (user.emails) { %>
+Email: <%= user.emails[0].value %><br/>
+User: <%=user%>
+<% } %>
+</p>

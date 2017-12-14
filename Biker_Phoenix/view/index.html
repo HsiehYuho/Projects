@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>Bike Phoenix - CIS 550 Project</title>
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="../images/android-desktop.png">
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+		<link rel="apple-touch-icon-precomposed" href="../images/ios-desktop.png">
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="../images/touch/ms-touch-icon-144x144-precomposed.png">
+		<meta name="msapplication-TileColor" content="#3372DF">
+		<link rel="shortcut icon" href="../images/favicon.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+		<link rel="stylesheet" href="../styles/styles.css">
+		<link rel="stylesheet" href="../styles/styles-custom.css">
+	</head>
+	<body>
+		<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+			<header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout-title">Biker Phoenix</span>
+					<div class="mdl-layout-spacer"></div>
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+					<i class="material-icons">more_vert</i>
+					</button>
+					<ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+						<li class="mdl-menu__item">About</li>
+					</ul>
+				</div>
+			</header>
+			<div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+				<header class="demo-drawer-header">
+					<img src="https://pbs.twimg.com/profile_images/921416829049991168/pqXdvLhR_400x400.jpg" class="demo-avatar">
+					<div class="demo-avatar-dropdown">
+						<span>garvit@seas.upenn.edu</span>
+						<div class="mdl-layout-spacer"></div>
+						<button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+						<i class="material-icons" role="presentation">arrow_drop_down</i>
+						<span class="visuallyhidden">Accounts</span>
+						</button>
+						<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+							<li class="mdl-menu__item">Sign out</li>
+						</ul>
+					</div>
+				</header>
+				<nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+					<a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">directions</i>Directions</a>
+					<a class="mdl-navigation__link" href="/map"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">map</i>View Map</a>
+					<a class="mdl-navigation__link" href="/history"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">history</i>History</a>
+					<a class="mdl-navigation__link" href="/bike-stations"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">directions_bike</i>Bike Stations</a>
+					<a class="mdl-navigation__link" href="/subway-stations"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">directions_transit</i>Subway Stations</a>
+					<div class="mdl-layout-spacer"></div>
+					<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content mdl-color--grey-100">
+				<div ng-app="directions" ng-controller="directionsController" class="mdl-grid demo-content">
+					<div class="mdl-cell ">
+						<div class="mdl-color--white mdl-shadow--2dp input-boxes">
+							<input ng-model="source" type="text" placeholder="Source" class="source-box location-input">
+						</div>
+						<div class="mdl-color--white mdl-shadow--2dp input-boxes">
+							<input ng-model="destination" type="text" placeholder="Destination" class="destination-box location-input">
+						</div>
+						<div class="submit-button mdl-shadow--2dp" ng-href='#here' ng-click='search()'>Search</div>
+					</div>
+					<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout-title headline">
+						<div class="heading-directions">
+							<div>Directions</div>
+							<div class="totalTime">{{'Total Time: ' + totalTime + ' min'}}</div>
+						</div>
+
+						<div class="load-bar" ng-show='show'>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+
+						<div ng-repeat="x in path" class="mode-transport clearfix">
+							<div ng-class="x.mode"></div>
+							<div class="mode-text-direction">
+								<div class="from-block dir-block">{{ x.start }}</div>
+								<div class="to-block dir-block">{{ x.end }}</div>
+							</div>
+							<div class="mode-stats-distime">
+								<div class="time-taken">{{ x.time + ' min'}}</div>
+								<div class="distance">{{ x.distance + ' miles'}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="./js/get_best_path.js"></script>
+		<script type="text/javascript" src="./js/map.js"></script>
+		<script type="text/javascript" src="controllers/mainController.js"></script>
+	</body>
+</html>

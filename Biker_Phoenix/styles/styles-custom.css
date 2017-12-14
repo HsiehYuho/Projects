@@ -1,0 +1,176 @@
+.input-boxes {
+	height:	54px;
+	margin-bottom: 16px;
+	background-image: url("../images/map-marker.svg");
+	background-position: 10px;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	padding-left:44px;
+}
+
+.submit-button {
+	height:	54px;
+	margin-bottom: 16px;
+	line-height: 54px;
+	text-align: center;
+	font-size: 18px;
+	background-color: #00C4B1;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.location-input {
+	font-family: Roboto;
+	height:30px;
+	font-size: 17px;
+	margin-top:11px;
+	border: none;
+	padding: none;
+	outline: none;
+	width: calc(100% - 2px);
+}
+
+.headline {
+	color:	#757575;
+	padding: 0;
+	height: auto;
+	min-height: auto;
+}
+
+.heading-directions {
+	background-color: #00BCAE;
+	color: #ffffff;
+	padding: 24px;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.mode-transport {
+	padding:	24px;
+	border-bottom:	1px solid #E6E6E6;
+}
+
+.mode-icon-bike {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url("../images/bike.svg")
+}
+
+.mode-icon-walk {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url("../images/walk.svg")
+}
+
+.mode-icon-subway {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-repeat: no-repeat;
+	background-image: url("../images/subway.svg")
+}
+
+.mode-text-direction {
+	float: left;
+	padding-left: 24px;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.mode-stats-distime {
+	float: right;
+}
+
+.time-taken {
+	text-align: right;
+	font-size: 16px;
+	color: #37A600;
+}
+
+.distance {
+	text-align: right;
+	padding-top: 12px;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.from-block::before {
+	content: "FROM";
+}
+
+.to-block::before {
+	content: "TOWARDS";
+}
+
+.dir-block::before {
+	position: relative;
+	left: 0;
+	color: #333;
+	width: 100px;
+	display: inline-block;
+	font-size: 12px;
+	color: #243239;
+	letter-spacing: 1px;
+}
+
+.totalTime {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	line-height: 76px;
+	right: 24px;
+	font-size: 18px;
+	color: #F5F5F5;
+}
+
+.load-bar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #fdba2c;
+}
+.bar {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  text-align: center;
+}
+.bar:nth-child(1) {
+  background-color: #da4733;
+  animation: loading 2s linear infinite;
+}
+.bar:nth-child(2) {
+  background-color: #3b78e7;
+  animation: loading 2s linear 1s infinite;
+}
+.bar:nth-child(3) {
+  background-color: #fdba2c;
+  animation: loading 2s linear 1.5s infinite;
+}
+@keyframes loading {
+    from {left: 50%; width: 0;z-index:100;}
+    33.3333% {left: 0; width: 100%;z-index: 10;}
+    to {left: 0; width: 100%;}
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
