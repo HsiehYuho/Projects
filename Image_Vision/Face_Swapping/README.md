@@ -30,10 +30,10 @@ python runme.py
 ## Ouput Video
 
 NOTE: The dyssynchrony is due to the output video frame number, the effect is quite good.
-* Easy(https://youtu.be/pF82J-6JAUw)
-* Medium(https://youtu.be/v1zasU9ZLUY)
-* Hard-Multiface(https://youtu.be/Tz4_QJ86cHI)
-* Hard-High-contrast(https://youtu.be/7iv6nfuyp1A) 
+* [Easy](https://youtu.be/pF82J-6JAUw)
+* [Medium](https://youtu.be/v1zasU9ZLUY)
+* [Hard-Multiface](https://youtu.be/Tz4_QJ86cHI)
+* [Hard-High-contrast](https://youtu.be/7iv6nfuyp1A) 
 
 ## Method
 1. Face feature detection  
@@ -71,15 +71,15 @@ Description: Use feature detection output to determine whether frame should be n
 
 ## Reference
 
-1. Face_Warping_Triangulation(https://www.learnopencv.com/warp-one-triangle-to-another-using-opencv-c-python/)
+1. [Face_Warping_Triangulation](https://www.learnopencv.com/warp-one-triangle-to-another-using-opencv-c-python/)
 
-2. Face_Warping_Homography(https://www.learnopencv.com/homography-examples-using-opencv-python-c/)
+2. [Face_Warping_Homography](https://www.learnopencv.com/homography-examples-using-opencv-python-c/)
 
-3. Dlib(http://dlib.net/face_landmark_detection.py.html)
+3. [Dlib](http://dlib.net/face_landmark_detection.py.html)
 
-4. Normalization(https://docs.opencv.org/3.2.0/d5/daf/tutorial_py_histogram_equalization.html)
+4. [Normalization](https://docs.opencv.org/3.2.0/d5/daf/tutorial_py_histogram_equalization.html)
 
-5. Blending(https://github.com/MarekKowalski/FaceSwap/blob/master/FaceSwap/)
+5. [Blending](https://github.com/MarekKowalski/FaceSwap/blob/master/FaceSwap/)
 
 ## Contributor
 
