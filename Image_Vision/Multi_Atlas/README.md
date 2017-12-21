@@ -10,7 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 * Matlab (development version 2017a)
 * c3d command line tool (Must be able to use c3d from terminal)
-* Atlas_Data put in Image Folder.
+* Atlas_Data put in Image Folder with such folders  
+"Affine_Deform_Nii" (empty), "Affine_Nii" (empty), "Img_Nii", "Label_Nii", "Seg_Resample_Nii"
 
 ### Installing c3d command line tool (MAC)
 
@@ -133,7 +134,6 @@ Open runme.m file and run the program by click run.
 3. "NIFTI_Function" contains the third party functions provided by Jimmy Shen, 2009
 4. "Output" contains the predict segmentation
 5. "Result" contains the temporary results which worth discuss
-6. "Shell_Script" contains the reslice interpolation shell scripts
 7. "Test_Data" contains all the atlas images in sub folder "Images"
 
 ### The runme.m file
