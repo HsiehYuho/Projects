@@ -1,6 +1,6 @@
-# BECIS537-2017-RVOT
+# Automatic Segmentation of the Right Ventricular Outflow Tract (RVOT) from Human MRI Data 
 
-Working toward automatic RVOT segmentation for modeling of TOF
+## Sponser: Dr. Matthew Jolley MD, Dr. Alison Pouch PhD
 
 ## Getting Started
 
