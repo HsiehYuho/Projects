@@ -146,7 +146,8 @@ The main structure of runme.file includes three parts.
 6. (Optional) Validate the predict segmentation with the manual segmentation(ground truth). 
 
 ## Results
-
+![Alt text](./ReadMe_Pics/Result_1.png?raw=true "Result1")
+![Alt text](./ReadMe_Pics/Result_2.png?raw=true "Result2")
 
 ## Built With
 *  Mac OS 10.13
