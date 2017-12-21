@@ -90,6 +90,6 @@ Description: Use feature detection output to determine whether frame should be n
 
 ## Contributor
 
-Yu-Ho Hsieh
-Yuemeng Li
-Yuanyuan Wang
+Yu-Ho Hsieh  
+Yuemeng Li  
+Yuanyuan Wang  
