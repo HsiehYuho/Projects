@@ -29,11 +29,9 @@ python runme.py
 
 ## Ouput Video/Images
 
-![Alt text](./ReadMe_Pics/before_color_correct.png?raw=true "Without Color Correct")
 ![Alt text](./ReadMe_Pics/blend.png?raw=true "After Blending")
 ![Alt text](./ReadMe_Pics/Comparing_old_new_mask.png?raw=true "Comparing")
 ![Alt text](./ReadMe_Pics/Normalize.png?raw=true "Normalize")
-![Alt text](./ReadMe_Pics/Bounding_box.png?raw=true "Bounding_box")
 ![Alt text](./ReadMe_Pics/Warp_face.png?raw=true "Warp_face")
 
 
