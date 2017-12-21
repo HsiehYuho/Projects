@@ -27,20 +27,20 @@ python runme.py
 
 6. You can find the output video appear in 'output_video'
 
-## Ouput Video/Images
-
-![Alt text](./ReadMe_Pics/blend.png?raw=true "After Blending")
-![Alt text](./ReadMe_Pics/Comparing_old_new_mask.png?raw=true "Comparing")
-![Alt text](./ReadMe_Pics/Normalize.png?raw=true "Normalize")
-![Alt text](./ReadMe_Pics/Warp_face.png?raw=true "Warp_face")
-
-
+## Results Video
 
 NOTE: The dyssynchrony is due to the output video frame number, the effect is quite good.
 * [Easy](https://youtu.be/pF82J-6JAUw)
 * [Medium](https://youtu.be/v1zasU9ZLUY)
 * [Hard-Multiface](https://youtu.be/Tz4_QJ86cHI)
 * [Hard-High-contrast](https://youtu.be/7iv6nfuyp1A) 
+
+## Resutls Images
+
+![Alt text](./ReadMe_Pics/blend.png?raw=true "After Blending")
+![Alt text](./ReadMe_Pics/Comparing_old_new_mask.png?raw=true "Comparing")
+![Alt text](./ReadMe_Pics/Normalize.png?raw=true "Normalize")
+![Alt text](./ReadMe_Pics/Warp_face.png?raw=true "Warp_face")
 
 ## Method
 1. Face feature detection  
