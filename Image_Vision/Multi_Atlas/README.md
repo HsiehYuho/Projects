@@ -1,6 +1,5 @@
 # Automatic Segmentation of the Right Ventricular Outflow Tract (RVOT) from Human MRI Data 
-
-## Sponser: Dr. Matthew Jolley MD, Dr. Alison Pouch PhD
+Sponser: Dr. Matthew Jolley MD, Dr. Alison Pouch PhD
 
 ## Getting Started
 
