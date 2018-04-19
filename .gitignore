@@ -4,4 +4,6 @@ Image_Vision/Multi_Atlas/Test_Data/Images
 
 Image_Vision/RBC_Tracking/Data
 
+Image_Vision/RBC_Tracking/bbox
+
 Image_Vision/RBC_Tracking/CNN_classifier/best_model.pt
