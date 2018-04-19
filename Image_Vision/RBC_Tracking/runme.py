@@ -12,6 +12,7 @@ video_start = Config.CONFIG['video_start']
 video_end = Config.CONFIG['video_end']
 
 save_dir_ct = Config.CONFIG['crop_ct_dir']
+
 # Use selective search 
 # use_ss = False
 
@@ -46,7 +47,6 @@ if __name__ == "__main__":
 			# selective_search(im,dirpath,frame)
 			print('finish: {}'.format(frame))
 		frame += 1
-
 		
 	vidcap.release()
 

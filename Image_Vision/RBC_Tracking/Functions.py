@@ -4,6 +4,8 @@ import os
 import Config 
 import pdb
 import numpy as np
+import random
+
 
 # xml
 import xml.etree.ElementTree as ET
@@ -87,6 +89,9 @@ def openCV_findCountour(im, save_dir,frame_num,data_num ,model):
 	deduct = Config.CONFIG['deduct']
 	surround = Config.CONFIG['surround']
 
+	test_percent = Config.CONFIG['test_percent']
+
+
 	if not os.path.exists(save_dir):
 		os.makedirs(save_dir)
 	if not os.path.exists(save_dir):
@@ -149,12 +154,20 @@ def openCV_findCountour(im, save_dir,frame_num,data_num ,model):
 
 	# open the txt for 'trainval.txt'
 	trainval_file_path = trainval_folder + "trainval.txt"
-	if os.path.exists(trainval_file_path):
-		append_write = 'a' # append if already exists
-	else:
-		append_write = 'w' # make a new file if not
-	trianval_f = open(trainval_file_path,append_write)
+	test_file_path = trainval_folder + "test.txt"
 
+	if os.path.exists(trainval_file_path):
+		append_write_train = 'a' # append if already exists
+	else:
+		append_write_train = 'w' # make a new file if not
+	
+	if os.path.exists(test_file_path):
+		append_write_test = 'a' # append if already exists
+	else:
+		append_write_test = 'w' # make a new file if not
+
+	trianval_f = open(trainval_file_path,append_write_train)
+	test_f = open(test_file_path,append_write_test)
 
 
 	for box in rect_set:
@@ -183,12 +196,18 @@ def openCV_findCountour(im, save_dir,frame_num,data_num ,model):
 	create_bbox_xml(im,rects_xml_list,labels,img_name,save_dir)
 	# write up overview 
 	cv2.imwrite(jpegImages_folder + img_name + ".jpg", imOut)
-	# write up trainval file
-	trianval_f.write(img_name +'\n')
+
+	# write up trainval file or test file based on test percentage
+	n = random.uniform(0, 1)
+	if( n < test_percent):
+		test_f.write(img_name +'\n')
+	else:
+		trianval_f.write(img_name +'\n')
 
 	# clean up
 	cv2.destroyAllWindows()
 	trianval_f.close()
+	test_f.close()
 
 def inside(x_out,y_out,w_out,h_out,x_in,y_in,w_in,h_in):
 	# points

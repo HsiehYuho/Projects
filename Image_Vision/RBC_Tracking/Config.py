@@ -17,7 +17,10 @@ CONFIG = {
     'overlap' : 0.4,
 
     'surround' : 31,
-    'deduct' :  2
+    'deduct' :  2,
+
+    'test_percent' : 0.1
+
 }
 
 CONFIG_BBOX = {
