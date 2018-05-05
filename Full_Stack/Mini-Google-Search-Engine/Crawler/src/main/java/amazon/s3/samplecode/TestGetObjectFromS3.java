@@ -12,11 +12,6 @@ import crawler.worker.storage.UrlObj;
 import java.io.*;
 
 public class TestGetObjectFromS3 {
-    static String HTML_BUCKET = "2018-spring-cis555-g09-htmlbucket";
-    static String PR_BUCKET = "2018-spring-cis555-g09-prbucket";
-
-    static String IMG_BUCKET = "2018-spring-cis555-g09-imgbucket";
-    static String HTML_NEWS_BUCKET = "2018-spring-cis555-g09-news-html-bucket";
     private ObjectMapper mapper = new ObjectMapper();
 
     public void listAllElementsFromS3(String bucketName){

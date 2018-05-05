@@ -58,8 +58,6 @@ public class WordCount {
 
         Configuration conf = new Configuration();
         // set credentials within conf
-        //conf.set("fs.s3n.awsAccessKeyId", "AKIAIQK6PLHMYED5SNVA");
-        //conf.set("fs.s3n.awsSecretAccessKey", "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");
 
         Job job = new Job(conf, "word count");
 

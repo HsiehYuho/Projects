@@ -1,10 +1,9 @@
-
-CIS555 Final Project 
-Author 
-Yu-Ho Hsieh (Crawler, Search Engine)
-Lanqing Yang (Indexer)
-Paul Hsu (Page Rank)
-sam weinberg
+* CIS555 Final Project 
+* Author 
+* Yu-Ho Hsieh (Crawler, Search Engine)
+* Lanqing Yang (Indexer)
+* Paul Hsu (Page Rank)
+* sam weinberg
 
 
 # Mini-Google Search Engine
