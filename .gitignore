@@ -2,8 +2,8 @@ Image_Vision/Face_Swapping/.gitignore
 
 Image_Vision/Multi_Atlas/Test_Data/Images
 
-Image_Vision/RBC_Tracking/Data
+Image_Vision/RBC_Tracking_Data_Generating/Data
 
-Image_Vision/RBC_Tracking/bbox
+Image_Vision/RBC_Tracking_Data_Generating/bbox
 
-Image_Vision/RBC_Tracking/CNN_classifier/best_model.pt
+Image_Vision/RBC_Tracking_Data_Generating/CNN_classifier/best_model.pt
