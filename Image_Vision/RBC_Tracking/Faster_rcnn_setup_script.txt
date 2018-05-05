@@ -53,3 +53,8 @@ python3 train.py train --env='fasterrcnn-caffe' --plot-every=100 --caffe-pretrai
 #I have save all log record in checkpoints folder and the intermediate train model
 
 #When pushing the data to the server, the ImageSets/Main/ folder needs to have trainval.txt and test.txt files
+
+
+#Data-Generator dependency
+python 2.7
+opencv
